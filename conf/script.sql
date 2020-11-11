@@ -7,12 +7,20 @@ CREATE TABLE raca(
 	codigo int not null auto_increment primary key,
     nome varchar(45)
 );
+INSERT INTO raca(nome)
+VALUES('angus'),
+('gersey'),
+('nelore');
 
 CREATE TABLE criador(
 	codigo int not null auto_increment primary key,
     nome varchar(45) not null,
     nomePropriedade varchar(45) not null
 );
+INSERT INTO criador(nome, nomePropriedade)
+VALUES('jaison','calipeiro'),
+('canela','gravatal'),
+('aspargo','chapadão');
 
 CREATE TABLE gado(
 	codigo int not null auto_increment,
@@ -48,4 +56,4 @@ INSERT INTO veterinario
 	   (nome, crmv, telefone) 
 VALUES ("HENRIQUE", 123, 1233414);
 
-select * from veterinario;
+select * from raca;

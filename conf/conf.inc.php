@@ -1,7 +1,7 @@
 <?php
     // Banco de Dados
     define('HOST', 'localhost');  
-    define('DBNAME', '');    
+    define('DBNAME', 'fazenda');    
     define('USER', 'root');  
     define('PASSWORD', '');
 

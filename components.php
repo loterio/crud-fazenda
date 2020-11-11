@@ -1,5 +1,21 @@
 <?php
 
+    function verifySelection($base, $try) {
+        if ($base == $try)
+            return 'selected'; 
+    }
+    function whatIs($tentativa){
+        if($tentativa == 1){
+            return "gado";
+        }else if($tentativa == 2){
+            return "veterinario";
+        }else if($tentativa == 3){
+            return "raca";
+        }else if($tentativa == 4){
+            return "criador";
+        }
+    }
+
     function menu() {
         echo "
         <ul>

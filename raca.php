@@ -19,7 +19,7 @@
 			</div>
 		</nav>
 			<h1>Cadastro de Raça</h1>
-			<form class="" action="" method="post"> 
+			<form class="" action="a-listar.php?k=raca" method="post"> 
 				<input placeholder='nome' value='<?php echo $nome; ?>' name="nome" type="text" class="validate">
 				<input type="submit" value="salvar">
 			</form>

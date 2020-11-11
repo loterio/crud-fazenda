@@ -20,7 +20,7 @@
 			</div>
 		</nav>
 			<h1>Cadastro de Criador</h1>
-			<form class="" action="" method="post"> 
+			<form class="" action="a-listar.php?k=criador" method="post"> 
 				<input placeholder='nome' value='<?php $nome; ?>' name="nome" type="text" class="validate">
 				<input placeholder='nome propriedade' value='<?php $nomePropriedade; ?>' name="nomePropriedade" type="text" class="validate">
 				<input type="submit" value="salvar">

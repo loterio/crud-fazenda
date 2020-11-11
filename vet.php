@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
 	include "components.php";
+	include "conf/Conexao.php";
+	$pdo = basicConnection();
+
     $title = "CRUD";
     
     $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
@@ -21,7 +24,7 @@
 			</div>
 		</nav>
 			<h1>Cadastro de Veterinário</h1>
-			<form class="" action="" method="post"> 
+			<form class="" action="a-listar.php?k=veterinario" method="post"> 
 				<input placeholder='nome' value="<?php echo $nome; ?>" name="nome" type="text" class="validate">
 				<input placeholder='CRMV' value="<?php echo $crmv; ?>" name="crmv" type="text" class="validate">
 				<input placeholder='telefone' value="<?php echo $tel; ?>" name="tel" type="text" class="validate">
