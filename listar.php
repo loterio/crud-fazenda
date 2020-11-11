@@ -65,10 +65,10 @@
 					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 						echo "
 						<tr>
-							<th>{$linha['codigo']}</th>
-							<th>{$linha['nome']}</th>
-							<th>{$linha['idade']}</th>
-							<th>{$linha['peso']}</th>
+							<td>{$linha['codigo']}</td>
+							<td>{$linha['nome']}</td>
+							<td>{$linha['idade']}</td>
+							<td>{$linha['peso']}</td>
 						</tr>
 						";
 					}
@@ -89,10 +89,10 @@
 					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 						echo "
 						<tr>
-							<th>{$linha['codigo']}</th>
-							<th>{$linha['nome']}</th>
-							<th>{$linha['crmv']}</th>
-							<th>{$linha['telefone']}</th>
+							<td>{$linha['codigo']}</td>
+							<td>{$linha['nome']}</td>
+							<td>{$linha['crmv']}</td>
+							<td>{$linha['telefone']}</td>
 						</tr>
 						";
 					}
@@ -111,8 +111,8 @@
 					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 						echo "
 						<tr>
-							<th>{$linha['codigo']}</th>
-							<th>{$linha['nome']}</th>
+							<td>{$linha['codigo']}</td>
+							<td>{$linha['nome']}</td>
 						</tr>
 						";
 					}
@@ -132,9 +132,9 @@
 					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 						echo "
 						<tr>
-							<th>{$linha['codigo']}</th>
-							<th>{$linha['nome']}</th>
-							<th>{$linha['nomePropriedade']}</th>
+							<td>{$linha['codigo']}</td>
+							<td>{$linha['nome']}</td>
+							<td>{$linha['nomePropriedade']}</td>
 						</tr>
 						";
 					}
