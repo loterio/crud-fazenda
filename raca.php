@@ -13,12 +13,17 @@
 	</head>
 	<body>
 		<nav>
-			<div>
-			<h4>CRUD - Raça</h4>
-			<?php menu(); ?>
-			</div>
+			<h4 class='logo'>CRUD da Fazenda</h4>
+			<ul class='menu'>
+				<li><a href='index.php'>Gado</a></li>
+				<li><a href='vet.php'>Veterinário</a></li>
+				<li><a href='raca.php'>Raça</a></li>
+				<li><a href='criador.php'>Criador</a></li>
+				<li><a href='listar.php'>Listar</a></li>
+			</ul>
 		</nav>
-			<h1>Cadastro de Raça</h1>
+		<div class="data">
+		<h1>Cadastro de Raça</h1>
 			<form class="" action="a-listar.php?k=raca" method="post"> 
 				<input placeholder='nome' value='<?php echo $nome; ?>' name="nome" type="text" class="validate">
 				<input type="submit" value="salvar">
@@ -27,5 +32,6 @@
 			<?php
 
 			?>
+		</div>
 	</body>
 </html>

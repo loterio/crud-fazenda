@@ -4,21 +4,21 @@
         if ($base == $try)
             return 'selected'; 
     }
-    function whatIs($tentativa){
-        if($tentativa == 1){
+    function whatIs($selected){         #  Função para definir qual filtro será 
+        if($selected == 1){             #  usado na listagem de tabelas.
             return "gado";
-        }else if($tentativa == 2){
+        }else if($selected == 2){
             return "veterinario";
-        }else if($tentativa == 3){
+        }else if($selected == 3){
             return "raca";
-        }else if($tentativa == 4){
+        }else if($selected == 4){
             return "criador";
         }
     }
 
     function menu() {
         echo "
-        <ul>
+        <ul id='navbar'>
             <li><a href='index.php'>Gado</a></li>
             <li><a href='vet.php'>Veterinário</a></li>
             <li><a href='raca.php'>Raça</a></li>
@@ -26,6 +26,14 @@
             <li><a href='listar.php'>Listar</a></li>
         </ul>
         ";
+    }
+
+    function linedRow($num){
+        if($num % 2 == 0){
+            return "'line-yes'";
+        } else {
+            return "'line-no'";
+        }
     }
 
     function tabela() {

@@ -1,0 +1,19 @@
+/*
+- data
+   > filtros
+   > tabela 
+*/
+
+.data {
+    display: flex;
+}
+
+.filtros {
+    /* background-color: blue; */
+    padding-right: 3vw;
+}
+.tabela {
+    /* background-color: red; */
+    padding-left: 3vw; 
+    margin-top: 4.6vh;
+}

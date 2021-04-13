@@ -2,7 +2,7 @@
 <?php
 	include "components.php";
 	include "conf/Conexao.php";
-	$title = "CRUD";
+	$title = "Farm";
 
 	$nome = isset($_POST['nome']) ? $_POST['nome'] : '';
 	$idade = isset($_POST['idade']) ? $_POST['idade'] : '';
@@ -18,52 +18,60 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
+
 		<nav>
-			<div>
-			<h4>CRUD - Gado</h4>
-			<?php menu(); ?>
-			</div>
+			<h4 class='logo'>CRUD da Fazenda</h4>
+			<ul class='menu'>
+				<li><a href='index.php'>Gado</a></li>
+				<li><a href='vet.php'>Veterinário</a></li>
+				<li><a href='raca.php'>Raça</a></li>
+				<li><a href='criador.php'>Criador</a></li>
+				<li><a href='listar.php'>Listar</a></li>
+			</ul>
 		</nav>
-		<h1>Cadastro de Gado</h1>
-		<form method="post" action="a-listar.php?k=gado"> <!-- gado(cod,nome,idade,peso,raca_cod,criador_cod) -->
-			<input placeholder="nome" name="nome" type="text" value="<?php echo $nome; ?>">
-			<input placeholder="idade" name="idade" type="text" value="<?php echo $idade; ?>">
-			<input placeholder="peso" name="peso" type="text" value="<?php echo $peso; ?>">
 
-			<select name="raca" id="raca">
-				<option value="">raça</option>
-				<optgroup label="Raças"> 
-				<?php
-					$pdo = basicConnection();
+		<div class="data">
+			<h1>Cadastro de Gado</h1>
+			<form method="post" action="a-listar.php?k=gado"> <!-- gado(cod,nome,idade,peso,raca_cod,criador_cod) -->
+				<input placeholder="nome" name="nome" type="text" value="<?php echo $nome; ?>">
+				<input placeholder="idade" name="idade" type="text" value="<?php echo $idade; ?>">
+				<input placeholder="peso" name="peso" type="text" value="<?php echo $peso; ?>">
 
-					$consulta = $pdo->query("SELECT codigo, nome FROM raca;");
+				<select name="raca" id="raca">
+					<option value="">selecione</option>
+					<optgroup label="Raças"> 
+					<?php
+						$pdo = basicConnection();
 
-					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-						echo "<option value='{$linha['codigo']}'>{$linha['nome']}</option>";
-					}
-				?>
-				</optgroup>
-			</select>
-			
-			<select name="criador" id="criador">
-				<option value="">criador</option>
-				<optgroup label="Criadores"> 
-				<?php
-					$pdo = basicConnection();
+						$consulta = $pdo->query("SELECT codigo, nome FROM raca;");
 
-					$consulta = $pdo->query("SELECT codigo, nome FROM criador;");
+						while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+							echo "<option value='{$linha['codigo']}'>{$linha['nome']}</option>";
+						}
+					?>
+					</optgroup>
+				</select>
+				
+				<select name="criador" id="criador">
+					<option value="">selecione</option>
+					<optgroup label="Criadores"> 
+					<?php
+						$pdo = basicConnection();
 
-					while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-						echo "<option value='{$linha['codigo']}'>{$linha['nome']}</option>";
-					}
-				?>
-				</optgroup>
-			</select>
-			
-			<input type="submit" value="salvar">
-		</form>
-		<?php
-			// tabela("joao","18","689.3","angus","gionei");
-		?>
+						$consulta = $pdo->query("SELECT codigo, nome FROM criador;");
+
+						while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+							echo "<option value='{$linha['codigo']}'>{$linha['nome']}</option>";
+						}
+					?>
+					</optgroup>
+				</select>
+				
+				<input type="submit" value="salvar">
+			</form>
+			<?php
+				// tabela("joao","18","689.3","angus","gionei");
+			?>
+		</div>
 	</body>
 </html>

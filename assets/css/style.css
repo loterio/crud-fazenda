@@ -5,20 +5,68 @@
 
 table {
     background-color: rgb(36, 69, 177);
-    min-width: 150px;
+    min-width: 30vw;
 }
 th {
-    
     background-color: rgb(36, 69, 177);
     color: white;
 }
 
-td {
-    background-color: rgb(255, 255, 255);
+/* td:hover {
     padding: 10px 16px;
     text-align: center;
+} */
+
+tr.line-yes td {
+    padding: 10px 16px;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
 }
-td:hover {
+tr.line-no td {
+    padding: 10px 16px;
+    text-align: center;
+    background-color: white;
+}
+
+tr.line-yes td:hover, tr.line-no td:hover {
     transition: .073s;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(170, 170, 170);
+}
+
+nav {
+    display: flex;
+    /* justify-content: center;     ajusta o alinhamento no eixo x  */ 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6vw;
+}
+
+nav .logo {
+    font-size: 26px;
+}
+
+ul.menu {
+    display: flex;
+}
+
+ul.menu li {
+    background-color: white;
+    list-style: none;
+}
+
+ul.menu li a {
+    padding: .2vh 1vw;
+    margin: 0vh .2vw;
+    text-decoration: none;
+    color: black;
+    transition: .24s;
+    border-radius: 2px;
+}
+
+ul.menu li a:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.data {
+    padding: 0px 6vw;
 }
